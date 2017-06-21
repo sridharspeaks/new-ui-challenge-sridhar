@@ -4,7 +4,7 @@ A fictional client, Lonely Hearts, wants to create a dating service for its cust
 
 Guidelines
 =========
-A sample page has been provided for you. Your goal is to populate the `#searchResults` div with a list of potential matches.
+A sample page has been provided for you. Run `npm install` followed by `npm start` to display the current page. Your goal is to populate the `#searchResults` div with a list of potential matches.
 These matches can then be filtered through the `#userPreferences` pane.
 Each match lists the candidate's photo, name, and age.
 Clicking on a match's contact button should display a dialog listing the match's phone number, cell number, and e-mail.
