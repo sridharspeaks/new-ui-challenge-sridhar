@@ -12,7 +12,7 @@ Clicking on a match's contact button should display a dialog listing the match's
 A web API is available to retrieve raw user information. Sample API usage can be found at [Random User API](https://randomuser.me/documentation#howto).
 This raw information will need to be transformed to match the display requirements below.
 
-A single match can be obtained via: <https://randomuser.me/?nat=US>
+A single match can be obtained via: <https://randomuser.me/api/?nat=US>
 
 This API's data can be used to retrieve all relevant match details.
 
