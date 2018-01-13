@@ -13,6 +13,7 @@
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="directives/contactDetails/contactDetail.css">
   <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,58 +25,27 @@
     -->
   <title>Lonely Hearts Dating</title>
 </head>
-
-<body>
+<body ng-app="LonelyHeart">
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-  <div class="header">
-    <h1>Lonely Hearts Dating Service</h1>
-  </div>
+  <top-nav></top-nav>
   <div class="container text-center">
     <div id="root">
-      <div id="userPreferences">
-        <h2>Search Criteria</h2>
-        <form class="form">
-          <div class="form-group">
-            <label class="control-label">Age</label>
-            <input type="text" name="ageMin" value="18"> to
-            <input type="text" name="ageMax" value="90">
-          </div>
-
-          <div class="form-group">
-            <label class="control-label">Gender</label>
-            <label class="radio-inline"><input type="radio" name="gender" checked />Any</label>
-            <label class="radio-inline"><input type="radio" name="gender" />Male</label>
-            <label class="radio-inline"><input type="radio" name="gender" />Female</label>
-          </div>
-
-          <button type="button" class="btn btn-default">Reset</button>
-          <button type="submit" class="btn btn-primary">Filter</button>
-        </form>
-      </div>
-
-      <!-- YOUR CODE HERE -->
-      <div id="searchResults">
-        <h2>2 Candidates Found</h2>
-        <ul>
-          <li>
-            <img class="photo" src="https://randomuser.me/api/portraits/women/95.jpg">
-            <span class="name lead">Martha Stewart</span>
-            <span class="age lead">28</span>
-            <button>Contact</button>
-          </li>
-          <li>
-            <img class="photo" src="https://randomuser.me/api/portraits/men/45.jpg">
-            <span class="name lead">Donald J Trump</span>
-            <span class="age lead">70</span>
-            <button>Contact</button>
-          </li>
-        </ul>
-      </div>
-      <!-- END SEARCH RESULTS -->
+      <filter-bar></filter-bar>
+      <result-list></result-list>
+      <contact-details ng-if="isShowContact"></contact-details>
     </div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="js/lonelyHeart.js" type="text/javascript"></script>
+  <script src="directives/topNav/topNavController.js" type="text/javascript"></script>
+  <script src="directives/filterBar/filterService.js" type="text/javascript"></script>
+  <script src="directives/filterBar/filterBarController.js" type="text/javascript"></script>
+  <script src="directives/resultList/resultListController.js" type="text/javascript"></script>
+  <script src="directives/resultList/resultListFilter.js" type="text/javascript"></script>
+  <script src="directives/contactDetails/contactDetailsController.js" type="text/javascript"></script>
 </body>
-
 </html>
