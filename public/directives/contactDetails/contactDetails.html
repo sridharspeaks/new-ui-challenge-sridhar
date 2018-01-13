@@ -1,0 +1,22 @@
+<div class="modal-dialog">
+    <div class="header">
+        Contact Details of {{activeRecord.name.first}} {{activeRecord.name.last}}
+    </div>
+    <div class="body">
+        <div>
+            <label>Phone</label>
+            {{activeRecord.phone}}
+        </div>
+        <div>
+            <label>Cell</label>
+            {{activeRecord.cell}}
+        </div>
+        <div>
+            <label>Cell</label>
+            {{activeRecord.email}}
+        </div>
+    </div>
+    <div class="footer">
+        <input type="button" value="Close" ng-click="showContact(false)" />
+    </div>
+</div>

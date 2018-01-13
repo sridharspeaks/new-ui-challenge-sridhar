@@ -1,0 +1,31 @@
+contact-details {
+	align-items: center;
+	background-color: rgba(51, 51, 51, .8);
+	display: flex;
+	flex: 1;
+	height: 100%;
+	justify-content: center;
+	min-height: 0;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	z-index: 10;
+}
+
+.modal-dialog {
+	background-color: #fff;
+}
+
+.modal-dialog .header {
+	text-transform: capitalize;
+}
+
+.modal-dialog .body {
+	overflow-y: auto;
+	padding: 10px;
+}
+
+.modal-dialog .footer{
+	padding: 10px;
+}
