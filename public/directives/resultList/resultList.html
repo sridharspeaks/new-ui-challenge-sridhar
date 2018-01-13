@@ -1,0 +1,11 @@
+<div id="searchResults">
+    <h2>{{resultList.length}} Candidates Found</h2>
+    <ul>
+        <li ng-repeat="record in resultList">
+            <img class="photo" ng-src="{{record.picture.large}}">
+            <span class="name lead">{{record.name.first}} {{record.name.last}}</span>
+            <span class="age lead">{{record.dob | calAge}}</span>
+            <button ng-click="showContact(true, $index)">Contact</button>
+        </li>
+    </ul>
+</div>
